@@ -1,0 +1,36 @@
+{
+  "name": "js-cypress-cucumber",
+  "version": "1.2.0",
+  "description": "Automation with NodeJs, Cypress e Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "cypress:all": "cypress run && npm run report", 
+    "cypress:scenario1": "cypress run --spec 'cypress/integration/features/authentication.feature' && cypress run --spec 'cypress/integration/features/share.feature'",
+    "cypress:scenario2": "cypress run --spec 'cypress/integration/features/dasareportrdiv2.feature' && cypress run --spec 'cypress/integration/features/domain.feature'",
+    "cypress:scenario3": "cypress run --spec 'cypress/integration/features/statuscode.feature'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tags": "node cleanFolder.js && ./node_modules/.bin/cypress-tags run -e",
+    "report": "node cucumber-html-report.js"
+  },
+  "devDependencies": {
+    "cucumber-pretty": "6.0.0",
+    "cucumber-html-reporter": "^5.2.0",
+    "cypress-cucumber-preprocessor": "^1.19.2",
+    "cypress-log-to-output": "^1.1.1",
+    "cypress-xpath": "^1.6.0",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "cypress-image-snapshot": "^3.1.1",
+    "cypress-multi-reporters": "^1.4.0",
+    "cypress-visual-regression": "^1.4.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "cucumberJson": {
+      "generate": true,
+      "html": true,
+      "outputFolder": "cypress/cucumber-json"
+    },
+    "author": "Luiz Oscar Guabiraba de Macedo",
+    "license": "ISC"
+  }
+}
