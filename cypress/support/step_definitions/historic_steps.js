@@ -10,7 +10,7 @@ Given('already specific route to validatate with {string}', () => {
 When('a GET request is executed correctly using {string}', (string3) => {
     cy.request({
         method: 'GET',
-        failOnStatusCode: false, url: 'https://turbo-api-dev.extremetest.io/integration/v2/historic/cip/6160518366/brand/delboni', 
+        failOnStatusCode: false, url: 'https://turbo-api-dev.extremetest.io/reports/jupiter/99999?token=xxxxx994', 
             auth: {
                 bearer: string3
         }

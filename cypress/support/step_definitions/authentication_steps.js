@@ -11,7 +11,8 @@ Given('already route for a user with {string}', () => {
 When('execute a {string} request, {string}, {string}', (string, string2, string3) => {
     cy.request({
         method: 'POST',
-        failOnStatusCode: false, url: 'https://turbo-api-dev.extremetest.io/authentication', body: {
+        failOnStatusCode: false, url: 'https://turbo-api-dev.extremetest.io/authentication', 
+        body: {
             register_code: string,
             type: string3,
             password: string2
