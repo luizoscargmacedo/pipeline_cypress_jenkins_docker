@@ -58,6 +58,11 @@ To run by TAG and generate a report.
 npm run tags TAGS='@authentication' ; npm run report 
 ```
 
+
+#### To run the automation tests on Jenkins Pipeline (with Docker Linux):
+/devops/JenkinsFile
+
+
 ### Project Information:
 Version: 1.2
 Created: 2021-08-31
